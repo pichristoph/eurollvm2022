@@ -7,7 +7,7 @@ Instructions to run the examples that have been presented during the live demo.
 * OS (one of the following): 
   * Linux: possible (tested with Ubuntu 20.04) 
   * Windows: possible with a linux subsystem (tested with Ubuntu 20.04 on Windows)
-* Java version: tested with 1.8 (not longer ensured to work), 11 and 17.
+* Java version: tested with 11 and 17.
 * Swift compiler: tested with 5.5.1
 * Clang/LLVM: tested with 10.0.0 and 12.0.1
 
@@ -38,7 +38,7 @@ As a result, you should receive ```Entering GRAALVM_<hash>_JAVA<java version>...
 ```shell
 $ mx build
 ```
-After having built a GraalVM, make sure that the environment variable ```GRAALVM_HOME``` is set to the latest built GraalVM folder:
+After having built a GraalVM, make sure that the environment variable ```GRAALVM_HOME``` is set to the latest built GraalVM bin folder and added to the ```PATH``` variable:
 
 ```shell
 $ cd ../sdk/latest_graalvm_home/bin
@@ -47,7 +47,7 @@ $ PATH=$PATH:$(pwd)
 $ cd ../../../sulong
 ```
 
-You can check if your GraalVM has been built correctly if ```mx lli --version``` and ```js --version``` lead to the corresponding output including ```GraalVM```, e.g. ```GraalVM JavaScript (GraalVM CE JVM 22.0.0-dev)```.
+Check if your GraalVM has been built correctly: ```mx lli --version``` and ```js --version``` should print the corresponding output including ```GraalVM```, e.g. ```GraalVM JavaScript (GraalVM CE JVM 22.0.0-dev)```.
 
 ### Compiling the source files to LLVM
 
@@ -62,7 +62,7 @@ which produces an object file called ```Inherit```.
 Optional (if you would like to inspect the LLVM code): Use ```$ mx llvm-dis Inherit Inherit.ll``` to get a file containing the LLVM code at instruction level.
 
 #### Compiling C++ to LLVM
-First, make sure the LLVM_TOOLCHAIN variable is set by executing
+First, make sure the ```LLVM_TOOLCHAIN``` variable is set by executing
 ```shell
 $ export LLVM_TOOLCHAIN=$(mx lli --print-toolchain-path)
 ```
@@ -81,8 +81,8 @@ Again an option, but not necessary: Use ```$ mx llvm-dis Acc.so Acc.ll``` for ge
 Now, the examples can be run. Call the JavaScript files with the commands
 
 ```shell
-js --polyglot --jvm --experimental-options --llvm.C++Interop=true Inherit.js
-js --polyglot --jvm --experimental-options --llvm.C++Interop=true Acc.js
+js --polyglot --jvm --experimental-options --llvm.C++Interop Inherit.js
+js --polyglot --jvm --experimental-options --llvm.C++Interop Acc.js
 ```
 
-Feel free to use available features of GraalVM such as debugging (```--inspect``` - you need to have Chromium Browser or Google Chrome installed) or profiling (```--cpusampler```) by adding the corresponding option!
+Feel free to use available features of GraalVM/Truffle such as GUI-supported debugging (```--inspect``` - you need to have Chromium Browser or Google Chrome installed) or profiling (```--cpusampler```) by adding the corresponding option!
