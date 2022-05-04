@@ -59,12 +59,7 @@ $ swiftc -O -embed-bitcode -g Inherit.swift
 ```
 which produces an object file called ```Inherit```. 
 
-Optional (if you would like to inspect the LLVM code): Use
-
-```shell
-$ mx llvm-dis Inherit Inherit.ll
-```
-to get a file containing the LLVM code at instruction level.
+Optional (if you would like to inspect the LLVM code): Use ```$ mx llvm-dis Inherit Inherit.ll``` to get a file containing the LLVM code at instruction level.
 
 #### Compiling C++ to LLVM
 First, make sure the LLVM_TOOLCHAIN variable is set by executing
@@ -75,7 +70,7 @@ $ export LLVM_TOOLCHAIN=$(mx lli --print-toolchain-path)
 Then, C++ files can be compiled to LLVM IR. In our case (for the demo), we need to compile ```Acc.cpp```: 
 
 ```shell
-$ LLVM_TOOLCHAIN/clang++ -g -fPIC -shared Acc.cpp -lgraalvm-llvm -o Acc.so
+$ $LLVM_TOOLCHAIN/clang++ -g -fPIC -shared Acc.cpp -lgraalvm-llvm -o Acc.so
 ```
 
 Again an option, but not necessary: Use ```$ mx llvm-dis Acc.so Acc.ll``` for getting an LLVM instruction level file. 
@@ -83,7 +78,7 @@ Again an option, but not necessary: Use ```$ mx llvm-dis Acc.so Acc.ll``` for ge
 
 ### Running the examples
 
-Now, the examples can be run. Call JavaScript files with the command
+Now, the examples can be run. Call the JavaScript files with the commands
 
 ```shell
 js --polyglot --jvm --experimental-options --llvm.C++Interop=true Inherit.js
