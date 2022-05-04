@@ -18,7 +18,25 @@ Instructions to run the examples that have been presented during the live demo.
 |Acc   	|yes   	|yes   	|yes   	|no |
 |Inherit   	|yes   	|yes   	|no   	|yes  | 
 
-**For getting and building Sulong and GraalVM JavaScript, please consider the [getting started documentation](../GETTINGSTARTED.md)  first!**
+### Getting and building the basic engines
+
+* [Building Sulong (LLVM engine)](https://github.com/oracle/graal/blob/master/sulong/docs/contributor/BUILDING.md)
+* [Building GraalVM JavaScript (also called Graal.js)](https://github.com/oracle/graaljs/blob/master/docs/Building.md)
+
+Make sure your project/folder hierarchy looks similar to this: 
+```bash
+├── graal
+|   ├── compiler
+|   ├── sdk
+|   ├── sulong
+|   ├── truffle
+|   `── (some more directories here)
+├── graaljs
+|   ├── graal-js
+|   ├── graal-nodejs
+|   `── docs
+`── mx
+```
 
 ## Running the demo examples
 
