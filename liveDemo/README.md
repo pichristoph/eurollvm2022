@@ -20,6 +20,8 @@ Instructions to run the examples that have been presented during the live demo.
 
 ### Getting and building the basic engines
 
+<span style="color: red;"> **NOTICE: Swift interoperability features are currently only available on my branch "tmp/swift" at github.com/pichristoph/graal and will be upstreamed soon. C++ interoperability has already been upstreamed to the main branch of github.com/oracle/graal. Thus, if you already want to try the Swift interoperability features now, please do not clone github.com/oracle/graal for building Sulong, but clone github.com/pichristoph/graal instead and switch to the 'tmp/swift' branch.** </span>
+
 * [Building Sulong (LLVM engine)](https://github.com/oracle/graal/blob/master/sulong/docs/contributor/BUILDING.md)
 * [Building GraalVM JavaScript (also called Graal.js)](https://github.com/oracle/graaljs/blob/master/docs/Building.md)
 
@@ -99,8 +101,8 @@ Again an option, but not necessary: Use ```$ mx llvm-dis Acc.so Acc.ll``` for ge
 Now, the examples can be run. Call the JavaScript files with the commands
 
 ```shell
-js --polyglot --jvm --experimental-options --llvm.C++Interop Inherit.js
-js --polyglot --jvm --experimental-options --llvm.C++Interop Acc.js
+js --polyglot --experimental-options --llvm.C++Interop Inherit.js
+js --polyglot --experimental-options --llvm.C++Interop Acc.js
 ```
 
 Feel free to use available features of GraalVM/Truffle such as GUI-supported debugging (```--inspect``` - you need to have Chromium Browser or Google Chrome installed) or profiling (```--cpusampler```) by adding the corresponding option!
