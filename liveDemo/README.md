@@ -98,7 +98,7 @@ Again an option, but not necessary: Use ```$ mx llvm-dis Acc.so Acc.ll``` for ge
 
 ### Running the examples
 
-Now, the examples can be run. Call the JavaScript files with the commands
+Now, the examples can be run (for the Inherit example, or other Swift code, make sure to be on the correct branch - see [above](https://github.com/pichristoph/eurollvm2022/tree/main/liveDemo#getting-and-building-the-basic-engines)!). Call the JavaScript files with the commands
 
 ```shell
 js --polyglot --experimental-options --llvm.C++Interop Inherit.js
