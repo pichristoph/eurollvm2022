@@ -1,5 +1,5 @@
 # eurollvm2022
-Files (live demo examples, how-to etc.) for presentation at [EuroLLVM 2022](https://llvm.swoogo.com/2022eurollvm).
+Files (live demo examples, how-to etc.) for presentation at [EuroLLVM 2022](https://llvm.org/devmtg/2022-05/).
 
 * [Slides (PDF)](./Slides.pdf)
 * [Live Demo: files and instructions](./liveDemo)
