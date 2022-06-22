@@ -1,4 +1,6 @@
-# eurollvm2022
+**Presentation at EuroLLVM 2022**
+## Extending Sulong (an LLVM bitcode runtime) for object-oriented cross-language interoperability
+
 Files (live demo examples, how-to etc.) for presentation at [EuroLLVM 2022](https://llvm.org/devmtg/2022-05/).
 
 * [Slides (PDF)](./Slides.pdf)
