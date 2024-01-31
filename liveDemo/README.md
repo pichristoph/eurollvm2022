@@ -20,7 +20,7 @@ Instructions to run the examples that have been presented during the live demo.
 
 ### Getting and building the basic engines
 
-<span style="color: red;"> **NOTICE: Swift interoperability features are currently only available on my branch "tmp/swift" at github.com/pichristoph/graal and will be upstreamed soon. C++ interoperability has already been upstreamed to the main branch of github.com/oracle/graal. Thus, if you already want to try the Swift interoperability features now, please do not clone github.com/oracle/graal for building Sulong, but clone github.com/pichristoph/graal instead and switch to the 'tmp/swift' branch.** </span>
+<span style="color: red;"> **NOTICE: Swift interoperability features are currently only available on my branch "tmp/swift" at github.com/pichristoph/graal. C++ interoperability has already been upstreamed to the main branch of github.com/oracle/graal. Thus, if you already want to try the Swift interoperability features, please do not clone github.com/oracle/graal for building Sulong, but clone github.com/pichristoph/graal instead and switch to the 'tmp/swift' branch.** </span>
 
 * [Building Sulong (LLVM engine)](https://github.com/oracle/graal/blob/master/sulong/docs/contributor/BUILDING.md)
 * [Building GraalVM JavaScript (also called Graal.js)](https://github.com/oracle/graaljs/blob/master/docs/Building.md)
